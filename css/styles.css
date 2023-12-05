@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  cursor: pointer;
+}
+
+/* ---------------- */
+/* global */
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  background: #d8d8d6;
+}
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+main {
+  flex-grow: 1;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* header */
+.header {
+  background: #81a36b;
+  padding: 21px 0 9px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .logo {
+} */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+}
+/* main */
+.amelia-flowers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.main-title {
+  font-family: Architects Daughter;
+  font-size: 62px;
+
+  font-weight: 400;
+  margin: 174px 0 41px;
+}
+.amelia-description {
+  font-family: Roboto;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 164.063%;
+  margin-bottom: 20px;
+  width: 540px;
+  height: 115px;
+}
+.btn-order {
+  font-family: Roboto;
+
+  font-size: 18px;
+
+  font-weight: 400;
+  border-radius: 6px;
+  background: #81a36b;
+  padding: 18px 34px 21px;
+  margin-right: 23px;
+}
+.btn-help {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 1px solid #81a36b;
+  padding: 18px 34px 21px;
+}
+.about_us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.about_us_title {
+  font-family: Architects Daughter;
+  font-size: 32px;
+
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.about_us_desc {
+  font-family: Roboto;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 164.063%;
+  width: 540px;
+}
+.advantages {
+  background: #81a36b;
+  padding: 78px 0;
+  margin-bottom: 120px;
+}
+.advantages_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+.advatages_item {
+  text-align: center;
+}
+.advantages-logo {
+  width: 80px;
+  height: 79px;
+  margin-bottom: 25px;
+}
+.advantages-desc {
+  font-family: Montserrat;
+  font-size: 18px;
+
+  font-weight: 500;
+}
+.about_work {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.about_work_title {
+  text-align: center;
+  font-family: Architects Daughter;
+  font-size: 32px;
+  margin: 180px 0 50px;
+}
+.about_work_desc {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 164.063%;
+  width: 540px;
+}
+.our_works_title {
+  text-align: center;
+  font-family: Architects Daughter;
+  font-size: 32px;
+
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.our_works_cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+  padding-top: 15px;
+}
+.card {
+  width: 350px;
+  border-radius: 6px;
+  background: #81a36b;
+  margin-bottom: 120px;
+}
+.img_cards {
+  width: 320px;
+  height: 402px;
+  border-radius: 6px;
+  padding-top: 15px;
+  margin-bottom: 23px;
+}
+.dsc_cards {
+  font-family: Roboto;
+  font-size: 18px;
+
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.footer {
+  background: #81a36b;
+  padding: 50px 0;
+  text-align: center;
+}
+.footer_logo {
+  margin-bottom: 25px;
+}
+.footer_title {
+  font-family: Roboto;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.footer_list a {
+  font-family: Roboto;
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+.footer_list > li {
+  margin-bottom: 15px;
+}
+.footer_data {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
