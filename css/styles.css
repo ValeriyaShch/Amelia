@@ -145,6 +145,7 @@ body {
   font-family: Roboto;
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.6;
   background: #d8d8d6;
 }
 .wrapper {
@@ -163,7 +164,7 @@ main {
 /* header */
 .header {
   background: #81a36b;
-  padding: 21px 0 9px;
+  padding: 21px 0;
 }
 .header-container {
   display: flex;
@@ -179,57 +180,49 @@ main {
 .menu a {
   text-decoration: none;
   color: black;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 18px;
 }
 /* main */
 .amelia-flowers {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
   margin-bottom: 120px;
+}
+.main-content {
+  flex: 1 1 45%;
 }
 
 .main-title {
   font-family: Architects Daughter;
   font-size: 62px;
-
-  font-weight: 400;
-  margin: 174px 0 41px;
+  margin-bottom: 41px;
 }
 .amelia-description {
-  font-family: Roboto;
-  font-size: 18px;
-
-  font-weight: 400;
-  line-height: 164.063%;
   margin-bottom: 20px;
-  width: 540px;
-  height: 115px;
 }
 .btn-order {
-  font-family: Roboto;
-
-  font-size: 18px;
-
-  font-weight: 400;
   border-radius: 6px;
   background: #81a36b;
-  padding: 18px 34px 21px;
+  padding: 16px 34px;
   margin-right: 23px;
 }
 .btn-help {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
   border-radius: 6px;
   border: 1px solid #81a36b;
-  padding: 18px 34px 21px;
+  padding: 16px 34px;
+  background: #d8d8d6;
+}
+.main-picture {
+  flex: 1 1 45%;
+}
+.main-picture-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about_us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 540px;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 120px;
 }
@@ -237,17 +230,9 @@ main {
   font-family: Architects Daughter;
   font-size: 32px;
 
-  font-weight: 400;
   margin-bottom: 50px;
 }
-.about_us_desc {
-  font-family: Roboto;
-  font-size: 18px;
 
-  font-weight: 400;
-  line-height: 164.063%;
-  width: 540px;
-}
 .advantages {
   background: #81a36b;
   padding: 78px 0;
@@ -255,8 +240,8 @@ main {
 }
 .advantages_list {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
-  gap: 90px;
 }
 .advatages_item {
   text-align: center;
@@ -268,63 +253,48 @@ main {
 }
 .advantages-desc {
   font-family: Montserrat;
-  font-size: 18px;
-
   font-weight: 500;
 }
 .about_work {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
   margin-bottom: 120px;
 }
 .about_work_title {
   text-align: center;
   font-family: Architects Daughter;
   font-size: 32px;
-  margin: 180px 0 50px;
+  margin-bottom: 50px;
 }
-.about_work_desc {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 164.063%;
-  width: 540px;
-}
+
 .our_works_title {
   text-align: center;
   font-family: Architects Daughter;
   font-size: 32px;
-
-  font-weight: 400;
   margin-bottom: 50px;
 }
 .our_works_cards {
   display: flex;
-  justify-content: space-between;
+
   gap: 30px;
   text-align: center;
-  padding-top: 15px;
-}
-.card {
-  width: 350px;
-  border-radius: 6px;
-  background: #81a36b;
+
   margin-bottom: 120px;
 }
+.card {
+  flex: 1 1 30%;
+  border-radius: 6px;
+  background: #81a36b;
+  padding: 15px 15px 40px;
+}
 .img_cards {
-  width: 320px;
+  width: 100%;
   height: 402px;
   border-radius: 6px;
-  padding-top: 15px;
   margin-bottom: 23px;
 }
-.dsc_cards {
-  font-family: Roboto;
-  font-size: 18px;
 
-  font-weight: 400;
-  margin-bottom: 40px;
-}
 .footer {
   background: #81a36b;
   padding: 50px 0;
@@ -334,15 +304,10 @@ main {
   margin-bottom: 25px;
 }
 .footer_title {
-  font-family: Roboto;
   font-size: 24px;
   margin-bottom: 20px;
 }
 .footer_list a {
-  font-family: Roboto;
-  font-size: 18px;
-
-  font-weight: 400;
   text-decoration: none;
   color: black;
 }
@@ -350,7 +315,209 @@ main {
   margin-bottom: 15px;
 }
 .footer_data {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* media1100 */
+@media (max-width: 1100px) {
+  .amelia-flowers {
+    position: relative;
+    padding: 60px 0;
+    justify-content: center;
+  }
+  .main-content {
+    max-width: 500px;
+    text-align: justify;
+  }
+  .main-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+  }
+  .buttons > button {
+    width: 47%;
+  }
+  .main-title {
+    text-align: center;
+  }
+  .about_work-picture img {
+    width: 450px;
+    height: 100%;
+  }
+  .about_work {
+    justify-content: center;
+  }
+}
+/* media 992 */
+@media (max-width: 992px) {
+  body {
+    font-size: 16px;
+    line-height: 1;
+  }
+  .menu {
+    gap: 18px;
+  }
+  .logo img {
+    width: auto;
+    height: 20px;
+  }
+  .main-title {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  .amelia-flowers {
+    margin-bottom: 60px;
+  }
+  .about_us_title {
+    margin-bottom: 30px;
+  }
+  .about_us {
+    margin-bottom: 60px;
+  }
+  .advantages {
+    padding: 50px 0;
+    margin-bottom: 60px;
+  }
+  .advantages-logo {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 25px;
+  }
+  .about_work-picture {
+    display: none;
+  }
+  .about_work_title {
+    margin-bottom: 25px;
+  }
+  .about_work_desc {
+    text-align: center;
+  }
+  .about_work {
+    margin-bottom: 60px;
+  }
+  .our_works_title {
+    margin-bottom: 30px;
+  }
+  .our_works_cards {
+    gap: 15px;
+    margin-bottom: 60px;
+  }
+  .img_cards {
+    width: 100%;
+    height: 350px;
+  }
+  .footer {
+    padding: 25px 0;
+  }
+  .footer_logo {
+    width: auto;
+    height: 20px;
+    margin-bottom: 15px;
+  }
+  .footer_title {
+    font-size: 18px;
+  }
+  .footer_data {
+    font-size: 14px;
+  }
+  .footer_list > li {
+    margin-bottom: 5px;
+  }
+}
+/* media 768 */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .menu {
+    gap: 14px;
+  }
+  .advantages {
+    padding: 20px 0;
+  }
+  .advantages-logo {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .img_cards {
+    width: 100%;
+    height: 250px;
+  }
+  .our_works_cards {
+    gap: 5px;
+  }
+  .card {
+    padding: 5px 5px 30px;
+  }
+}
+/* media 600 */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .header-container {
+    justify-content: center;
+  }
+  .amelia-flowers {
+    padding: 30px 0;
+  }
+  .main-title {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .buttons > button {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .btn-order {
+    margin-bottom: 10px;
+  }
+  .amelia-flowers {
+    margin-bottom: 40px;
+  }
+  .about_us_title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .advantages_list {
+    flex-wrap: wrap;
+  }
+  .advatages_item {
+    flex: 1 1 30%;
+    margin-bottom: 10px;
+  }
+  .advantages-logo {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  .advantages {
+    margin-bottom: 40px;
+  }
+  .about_us {
+    margin-bottom: 40px;
+  }
+  .about_work_title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .about_work {
+    margin-bottom: 40px;
+  }
+  .our_works_title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .our_works_cards {
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 }
